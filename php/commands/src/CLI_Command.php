@@ -46,7 +46,7 @@ class CLI_Command extends WP_CLI_Command {
 	}
 
 	/**
-	 * Print WP-CLI version.
+	 * Prints the WP-CLI version.
 	 *
 	 * ## EXAMPLES
 	 *
@@ -59,7 +59,7 @@ class CLI_Command extends WP_CLI_Command {
 	}
 
 	/**
-	 * Print various details about the WP-CLI environment.
+	 * Prints various details about the WP-CLI environment.
 	 *
 	 * Helpful for diagnostic purposes, this command shares:
 	 *
@@ -133,7 +133,7 @@ class CLI_Command extends WP_CLI_Command {
 	}
 
 	/**
-	 * Check to see if there is a newer version of WP-CLI available.
+	 * Checks to see if there is a newer version of WP-CLI available.
 	 *
 	 * Queries the Github releases API. Returns available versions if there are
 	 * updates available, or success message if using the latest release.
@@ -199,7 +199,7 @@ class CLI_Command extends WP_CLI_Command {
 	}
 
 	/**
-	 * Update WP-CLI to the latest release.
+	 * Updates WP-CLI to the latest release.
 	 *
 	 * Default behavior is to check the releases API for the newest stable
 	 * version, and prompt if one is available.
@@ -340,7 +340,7 @@ class CLI_Command extends WP_CLI_Command {
 	}
 
 	/**
-	 * Returns update information.
+	 * Retrieves WP-CLI update information.
 	 */
 	private function get_updates( $assoc_args ) {
 		$url = 'https://api.github.com/repos/wp-cli/wp-cli/releases?per_page=100';
@@ -425,7 +425,7 @@ class CLI_Command extends WP_CLI_Command {
 	}
 
 	/**
-	 * Dump the list of global parameters, as JSON or in var_export format.
+	 * Dumps the list of global parameters, as JSON or in var_export format.
 	 *
 	 * ## OPTIONS
 	 *
@@ -483,7 +483,7 @@ class CLI_Command extends WP_CLI_Command {
 	}
 
 	/**
-	 * Dump the list of installed commands, as JSON.
+	 * Dumps the list of installed commands, as JSON.
 	 *
 	 * ## EXAMPLES
 	 *
@@ -498,7 +498,7 @@ class CLI_Command extends WP_CLI_Command {
 	}
 
 	/**
-	 * Generate tab completion strings.
+	 * Generates tab completion strings.
 	 *
 	 * ## OPTIONS
 	 *
@@ -522,7 +522,7 @@ class CLI_Command extends WP_CLI_Command {
 	}
 
 	/**
-	 * List available WP-CLI aliases.
+	 * Lists available WP-CLI aliases.
 	 *
 	 * Aliases are shorthand references to WordPress installs. For instance,
 	 * `@dev` could refer to a development install and `@prod` could refer to
@@ -561,7 +561,7 @@ class CLI_Command extends WP_CLI_Command {
 	}
 
 	/**
-	 * Get a string representing the type of update being checked for.
+	 * Gets a string representing the type of update being checked for.
 	 */
 	private function get_update_type_str( $assoc_args ) {
 		$update_type = ' ';
@@ -575,7 +575,7 @@ class CLI_Command extends WP_CLI_Command {
 	}
 
 	/**
-	 * Detects if a command exists
+	 * Detects if a command exists.
 	 *
 	 * This commands checks if a command is registered with WP-CLI.
 	 * If the command is found then it returns with exit status 0.
